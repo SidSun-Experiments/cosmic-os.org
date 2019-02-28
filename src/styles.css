@@ -1,1 +1,113 @@
 /* You can add global styles to this file, and also import other style files */
+#home, #skills, #socials, #projects, #policy, #notfound {
+  padding-top: 64.27px;
+}
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+.nav-link {
+  opacity: 80%;
+}
+.bg-purple, .bg-purple-primary {
+  background-color: #6a51e6;
+}
+.vibranium-purple {
+  color: #6a51e6;
+}
+.bg-purple-secondary {
+  background-color: #2c26b2;
+}
+.bg-light-secondary, .even {
+  background-color: #fafafa;
+}
+.odd {
+  background-color: #fff;
+}
+.text-white-80 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+#navbar-brand {
+  font-size: x-large;
+}
+#navigationBar {
+  font-family: 'Roboto', sans-serif;
+}
+#home, #skills, #socials, #projects, #policy, #notfound {
+  font-family: 'Open Sans', sans-serif;
+}
+@media (min-width: 1200px) {
+  .w-xl-100 {
+    width: 100%;
+  }
+  .w-xl-75 {
+    width: 75%;
+  }
+  .w-xl-50 {
+    width: 50%;
+  }
+  .w-xl-25 {
+    width: 25%;
+  }
+  .mw-xl-inherit {
+    max-width: inherit;
+  }
+}
+@media (min-width: 992px) { /*large*/
+  .w-lg-100 {
+    width: 100%;
+  }
+  .w-lg-75 {
+    width: 75%;
+  }
+  .w-lg-50 {
+    width: 50%;
+  }
+  .w-lg-25 {
+    width: 25%;
+  }
+  .mw-lg-inherit {
+    max-width: inherit;
+  }
+}
+@media (min-width: 768px) {  /*medium*/
+  .w-md-100 {
+    width: 100%;
+  }
+  .w-md-75 {
+    width: 75%;
+  }
+  .w-md-50 {
+    width: 50%;
+  }
+  .w-md-25 {
+    width: 25%;
+  }
+  .mw-md-inherit {
+    max-width: inherit;
+  }
+}
+@media (max-width: 576px) { /*small*/
+  .w-sm-75 {
+    width: 75%;
+  }
+  .w-sm-50 {
+    width: 50%;
+  }
+  .w-sm-25 {
+    width: 25%;
+  }
+  .w-sm-100 {
+    width: 100%;
+  }
+  .mw-sm-inherit {
+    max-width: inherit;
+  }
+}

@@ -1,3 +1,23 @@
-<p>
-  home works!
-</p>
+<div id="home">
+  <header class="bg-white text-black-75 py-5" id="intro">
+    <div class="text-center">
+      <div class="container text-center align-content-center">
+        <h2>Introducing; Me.</h2>
+        <h3>Sid Sun (Sidharth Soni)</h3>
+        <h3>Developer</h3>
+        <br>
+          <p class="text-center h4 ml-auto mr-auto w-lg-75 w-md-75 w-sm-100">“{{ quote.responseJSON.quotes[random] }}”</p>
+      </div>
+    </div>
+  </header>
+  <div id="objective" class="py-5 bg-light-secondary">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Objective</h2>
+          <p class="lead">{{ data.responseJSON.objective }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

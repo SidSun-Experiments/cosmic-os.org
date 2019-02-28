@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SocialComponent } from './social/social.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { PolicyComponent } from './policy/policy.component';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,12 @@ import { NotfoundComponent } from './notfound/notfound.component';
     SkillsComponent,
     ProjectsComponent,
     SocialComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    PolicyComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
