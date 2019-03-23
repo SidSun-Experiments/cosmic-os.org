@@ -1,32 +1,37 @@
-<nav class="navbar navbar-expand-lg bg-purple fixed-top navbar-dark shadow-sm" id="navigationBar" role="navigation">
-  <div class="container my-1">
+<nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light shadow-sm py-0" id="navigationBar" role="navigation">
+  <div class="container">
     <div>
-      <a class="navbar-brand" routerLink="/" style="padding-top: 0.3rem; padding-bottom: 0.3rem"><span class="h2" id="navbar-brand"><img src="../assets/sid.jpg" width="auto" height="30px" class="rounded-circle"> Sid Sun</span></a>
+      <a class="navbar-brand" routerLink="/"><span class="h2" id="navbar-brand"><img src="https://avatars1.githubusercontent.com/u/22676791?s=200&v=4Z" width="auto" height="60vh" class="rounded-circle"> Cosmic-<span class="accent-pink">OS</span></span></a>
     </div>
-    <a href="#" class="navbar-toggler border-0" data-target="#navbarMenu" aria-expanded="false" aria-controls="navbarMenu" data-toggle="collapse"><i class="fas fa-ellipsis-v"></i></a>
+    <a class="navbar-toggler navber-button border-0" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="navbar-icon"><span></span><span></span><span></span></div>
+    </a>
+    <!-- <a href="#" class="navbar-toggler border-0" data-target="#navbarMenu" aria-expanded="false" aria-controls="navbarMenu" data-toggle="collapse"><i class="fas fa-ellipsis-v"></i></a> -->
     <div class="collapse navbar-collapse" id="navbarMenu">
       <ul class="navbar-nav ml-auto nav-pills">
         <li class="nav-item">
-          <a class="nav-link" aria-controls="navbarMenu" data-toggle="collapse" routerLinkActive="text-white" routerLink="/skills">Skills</a>
+          <a class="nav-link" aria-controls="navbarMenu" data-toggle="collapse" routerLinkActive="accent-pink" routerLink="/team">Team</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" aria-controls="navbarMenu" routerLinkActive="text-white" routerLink="/projects">Projects</a>
+          <a class="nav-link" data-toggle="collapse" aria-controls="navbarMenu" routerLinkActive="accent-pink" routerLink="/features">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" aria-controls="navbarMenu" routerLinkActive="text-white" routerLink="/socials">Socials</a>
+          <a class="nav-link" data-toggle="collapse" aria-controls="navbarMenu" routerLinkActive="accent-pink" routerLink="/devices">Devices</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" aria-controls="navbarMenu" routerLinkActive="text-white" routerLink="/policy">Privacy Policy</a>
+          <a class="nav-link" data-toggle="collapse" aria-controls="navbarMenu" routerLinkActive="accent-pink" routerLink="/policy">Privacy Policy</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<router-outlet></router-outlet>
-<div class="align-bottom container-fluid">
+<div id="content-body">
+  <router-outlet></router-outlet>
+</div>
+<div class="align-bottom container-fluid hide">
   <div class="container my-2">
     <div class="text-center">
-      <p class="copyright text-center text-black-50">&mdash; Copyright &copy; 2019 Sid Sun. All Rights Reserved. &mdash;</p>
+      <p class="copyright text-center text-black-50">&mdash; Copyright &copy; 2019 Cosmic-OS. All Rights Reserved. &mdash;</p>
       <p class="text-center text-black-50">&mdash;<a class="vibranium-purple" routerLink="/policy">Privacy Policy</a>&mdash;</p>
     </div>
   </div>

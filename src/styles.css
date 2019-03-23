@@ -1,11 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
-#home, #skills, #socials, #projects, #policy, #notfound {
-  padding-top: 64.27px;
+#content-body {
+  padding-top: 70px;
+}
+.bg-img-home {
+  background-image: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url(https://cdn.sidsun.com/cos/corona.png);
+}
+.bg-img-features {
+  background-image: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url(./assets/banner.png);
+}
+.bg-img-get {
+  background-image: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url(./assets/downloadPageBG.jpg);
+}
+.bg-img-team {
+  background-image: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url(./assets/paytayyyyyy.png);
+}
+.bg-img {
+  background-attachment: fixed;
+  position: relative;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+.teamView:nth-child(even) {
+  background-color: #fafafa;
+}
+.teamView:nth-child(odd) {
+  background-color: #fff;
+}
+.featureView:nth-child(odd) {
+  background-color: #fafafa;
+}
+.featureView:nth-child(even) {
+  background-color: #fff;
+}
+#text-field {border-radius: 1rem;
+  background-color: #000;
+  opacity: 0.5;
 }
 .vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -16,11 +50,11 @@
 .nav-link {
   opacity: 80%;
 }
-.bg-purple, .bg-purple-primary {
-  background-color: #6a51e6;
+.accent-pink {
+  color: #f00850 !important;
 }
-.vibranium-purple {
-  color: #6a51e6;
+.bg-rose-pink {
+  background-color: #f00850;
 }
 .bg-purple-secondary {
   background-color: #2c26b2;
@@ -38,10 +72,10 @@
   font-size: x-large;
 }
 #navigationBar {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
-#home, #skills, #socials, #projects, #policy, #notfound {
-  font-family: 'Open Sans', sans-serif;
+body {
+  font-family: 'Open Sans', sans-serif !important;
 }
 @media (min-width: 1200px) {
   .w-xl-100 {
@@ -110,4 +144,95 @@
   .mw-sm-inherit {
     max-width: inherit;
   }
+}
+/*Navbar Hamburger Menu*/
+
+.navbar-icon {
+width: 30px;
+height: 20px;
+position: relative;
+margin: 0px;
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+cursor: pointer;
+}
+
+.navbar-icon span {
+display: block;
+position: absolute;
+height: 3px;
+width: 100%;
+border-radius: 9px;
+opacity: 1;
+left: 0;
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: .25s ease-in-out;
+-moz-transition: .25s ease-in-out;
+-o-transition: .25s ease-in-out;
+transition: .25s ease-in-out;
+}
+
+.navbar-icon span {
+background: #f00850;
+}
+
+.navbar-icon span:nth-child(1) {
+top: 0px;
+-webkit-transform-origin: left center;
+-moz-transform-origin: left center;
+-o-transform-origin: left center;
+transform-origin: left center;
+}
+
+.navbar-icon span:nth-child(2) {
+top: 9px;
+-webkit-transform-origin: left center;
+-moz-transform-origin: left center;
+-o-transform-origin: left center;
+transform-origin: left center;
+}
+
+.navbar-icon span:nth-child(3) {
+top: 18px;
+-webkit-transform-origin: left center;
+-moz-transform-origin: left center;
+-o-transform-origin: left center;
+transform-origin: left center;
+}
+
+.navbar-icon.open span:nth-child(1) {
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
+top: 0px;
+left: 8px;
+}
+
+.navbar-icon.open span:nth-child(2) {
+width: 0%;
+opacity: 0;
+}
+
+.navbar-icon.open span:nth-child(3) {
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+top: 21px;
+left: 8px;
+}
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
 }

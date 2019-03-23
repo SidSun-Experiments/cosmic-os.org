@@ -6,23 +6,27 @@ declare var $:any;
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  data: { responseJSON: { objective: string } };
-  quote: { responseJSON: { quotes: string[] } };
-  random: number;
-
+  retrievedDATA: {
+    responseJSON: {
+      jumbotron: {
+        brandingText: string
+      },
+      divisions: {
+        title: string,
+        text: string
+      }[],
+      keyFeatures: {
+        title: string,
+        text: string
+      }[],
+    }
+  };
   constructor() {
   }
 
   ngOnInit() {
-    this.data = $.getJSON('https://eowyn.strangebits.co.in/objective.json', (data) => {
+    this.retrievedDATA = $.getJSON('https://cdn.sidsun.com/cos/home.json', (data) => {
       return data;
     });
-    this.quote = $.getJSON('https://eowyn.strangebits.co.in/quotes.json', (data) => {
-      this.random = getRandomNumber(0, parseInt(data.quotes.length, 10));
-      return data;
-    });
-    function getRandomNumber(min, max) {
-      return Math.floor(Math.random() * (max - min)) + min;
-    }
   }
 }

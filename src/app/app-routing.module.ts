@@ -1,11 +1,13 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {ProjectsComponent} from './projects/projects.component';
 import {HomeComponent} from './home/home.component';
-import {SocialComponent} from './social/social.component';
-import {SkillsComponent} from './skills/skills.component';
 import {NotfoundComponent} from './notfound/notfound.component';
 import {PolicyComponent} from './policy/policy.component';
+import {FeaturesComponent} from "./features/features.component";
+import { TeamComponent } from "./team/team.component";
+import { MemberPageComponent } from "./team/member-page/member-page.component";
+import { DevicesComponent } from "./devices/devices.component";
+import { DeviceComponent } from "./devices/device/device.component";
 
 const routes: Routes = [
   {
@@ -15,16 +17,28 @@ const routes: Routes = [
     path: 'policy', redirectTo: 'privacy', pathMatch: 'full'
   },
   {
+    path: 'team', component: TeamComponent
+  },
+  {
+    path: 'team/:name', component: MemberPageComponent
+  },
+  {
+    path: 'devices/:name', component: DeviceComponent
+  },
+  {
+    path: 'devices', component: DevicesComponent
+  },
+  {
     path: 'privacy-policy', redirectTo: 'privacy', pathMatch: 'full'
   },
   {
-    path: 'skills', component: SkillsComponent
+    path: 'features', component: FeaturesComponent
   },
   {
-    path: 'socials', component: SocialComponent
+    path: 'devices', redirectTo: 'get', pathMatch: 'full'
   },
   {
-    path: 'projects', component: ProjectsComponent
+    path: 'download', redirectTo: 'get', pathMatch: 'full'
   },
   {
     path: '', component: HomeComponent

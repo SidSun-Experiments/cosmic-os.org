@@ -1,20 +1,19 @@
-<div id="socials">
+<div id="person">
   <header class="bg-light-secondary text-black-75 py-5">
     <div class="text-center">
       <div class="container text-center align-content-center">
-        <h2>You can find me on the internet at:</h2>
-        <br>
         <div class="row">
           <div class="col-lg">
-            <img src="../../assets/sid.jpg" class="rounded-circle w-lg-75 w-sm-75" width="auto" height="auto">
+            <img [src]="person.responseJSON.img" class="rounded-circle w-lg-75 w-sm-75" width="auto" height="auto">
           </div>
           <div class="col-lg mt-md-4">
             <div class="container text-lg-left text-md-center">
-              <h2 class="mt-4">Sid Sun (Sidharth Soni)</h2>
-              <p class="h3 my-3">Feel free to get in touch if you'd like to talk, or; follow me!</p>
+              <h2 class="mt-4">{{ person.responseJSON.name }}</h2>
+              <p class="h4 my-3">{{ person.responseJSON.role }}</p>
+              <p class="h5 my-3">"{{ person.responseJSON.quote }}"</p>
               <div class="mt-md-3 mt-sm-3">
-                <div class="row list-inline">
-                  <a class="col-sm-auto mx-md-auto shadow-sm bg-white px-md-0 px-lg-2 link-unstyled skillDiv" *ngFor="let social of socials.responseJSON" href="{{ social.href }}" target="_blank">
+                <div class="row d-flex justify-content-lg-start justify-content-md-center">
+                  <a class="skillDiv col-sm-auto shadow-sm bg-white link-unstyled mx-2 my-sm-2" *ngFor="let social of person.responseJSON.socials" [href]="social.href"target="_blank">
                     <p class="m-3"><span class="{{ social.icon }} "></span> {{ social.name }}</p>
                   </a>
                 </div>

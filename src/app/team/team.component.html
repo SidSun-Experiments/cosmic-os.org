@@ -1,0 +1,31 @@
+<div id="home">
+  <div class="container-fluid bg-img bg-img-team py-5" id="intro">
+    <div class="my-5 py-5">
+      <div class="container text-lg-left text-center text-white">
+        <h1>{{ retrievedDATA.responseJSON.head.catchyText }}</h1>
+        <br>
+        <h3>{{ retrievedDATA.responseJSON.head.fancyText }}</h3>
+      </div>
+    </div>
+  </div>
+  <div id="objective" class="py-5 teamView" *ngFor="let team of retrievedDATA.responseJSON.body">
+    <div class="container ">
+      <div class="mx-auto">
+        <h1 class="pb-3 text-center text-lg-left">{{ team.headingName }}</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <a class="col-lg-4 col-md-6 card-sm py-3 link-unstyled" *ngFor="let person of team.people" [routerLink]="['/team', person.routeName]">
+            <div class="w-75 mx-auto">
+              <img [src]="person.imageLink" class="card-img-top rounded-circle" alt="...">
+              <div class="card-body">
+                <h3 class="card-title">{{ person.name }}</h3>
+                <p class="h5 card-text">{{ person.role }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

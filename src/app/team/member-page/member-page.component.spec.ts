@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SocialComponent } from './social.component';
+import { MemberPageComponent } from './member-page.component';
 
-describe('SocialComponent', () => {
-  let component: SocialComponent;
-  let fixture: ComponentFixture<SocialComponent>;
+describe('MemberPageComponent', () => {
+  let component: MemberPageComponent;
+  let fixture: ComponentFixture<MemberPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SocialComponent ]
+      declarations: [ MemberPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SocialComponent);
+    fixture = TestBed.createComponent(MemberPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
